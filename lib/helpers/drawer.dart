@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_app_playground/counterPage.dart';
+import 'package:flutter_app_playground/settings.dart';
+
+Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
+  final drawerContent = <Widget>[
+    DrawerHeader(
+        child: Center(
+          child: Icon(Icons.assignment_ind, size: IconTheme.of(context).size * 4,),
+        ),
+        decoration: BoxDecoration(
+          color: Colors.deepOrange,
+        ),
+    ),
+    ListTile(
+        leading: Icon(Icons.home),
+        title: Text('Home'),
+        onTap: () {
+          if (currentRouteName != CounterPage.ROUTE_NAME) {
+            Navigator.pushNamed(context, CounterPage.ROUTE_NAME);
+          }
+        }),
+    ListTile(
+        leading: Icon(Icons.account_circle),
+        title: Text('Personal information'),
+        onTap: () {
+          if (currentRouteName != SettingsPage.ROUTE_NAME) {
+            Navigator.pushNamed(context, SettingsPage.ROUTE_NAME);
+          }
+        }),
+  ];
+
+  return Drawer(
+    child: ListView.builder(
+        padding: EdgeInsets.zero,
+        itemBuilder: (context, idx) {
+          if (idx < drawerContent.length) {
+            return drawerContent[idx];
+          }
+          return null;
+        },
+        itemCount: drawerContent.length),
+  );
+}
