@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_playground/counterPage.dart';
-import 'package:flutter_app_playground/settings.dart';
+import 'package:flutter_app_playground/settings/settings.dart';
 
 Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
   final drawerContent = <Widget>[

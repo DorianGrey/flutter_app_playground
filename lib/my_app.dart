@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_playground/settings.dart';
+import 'package:flutter_app_playground/settings/settings.dart';
 import 'package:flutter_app_playground/counterPage.dart';
 
 class MyApp extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_playground/helpers/drawer.dart';
+import 'package:flutter_app_playground/settings/settingsForm.dart';
 
 class SettingsPage extends StatefulWidget {
 
@@ -20,13 +21,7 @@ class _SettingsPageState extends State<SettingsPage> {
         title: Text("Settings testing page"),
       ),
       drawer: createDefaultAppDrawer(context, SettingsPage.ROUTE_NAME),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Text("Some fancy form stuff will happen here!")
-          ],
-        ),
-      ),
+      body: SettingsForm()
     );
   }
 }
