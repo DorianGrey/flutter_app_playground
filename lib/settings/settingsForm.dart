@@ -25,7 +25,7 @@ class SettingsFormState extends State<SettingsForm> {
       r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
 
   // Form field values.
-  DateTime dateOfBirth;
+  var _dateOfBirth = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -84,10 +84,10 @@ class SettingsFormState extends State<SettingsForm> {
                 labelText: 'Date of birth',
                 selectDate: (date) {
                   setState(() {
-                    dateOfBirth = date;                  
+                    _dateOfBirth = date;                  
                   });
                 },
-                selectedDate: this.dateOfBirth,
+                selectedDate: this._dateOfBirth,
               ),
               // Submit button
               Padding(

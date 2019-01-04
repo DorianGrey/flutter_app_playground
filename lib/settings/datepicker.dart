@@ -45,7 +45,7 @@ class DatePicker extends StatelessWidget {
   const DatePicker({
     Key key,
     this.labelText,
-    this.selectedDate,
+    @required this.selectedDate,
     this.selectDate
   }) : super(key: key);
 

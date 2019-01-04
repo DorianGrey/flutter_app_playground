@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+
+import 'package:flutter_app_playground/store/actions.dart';
+import 'package:flutter_app_playground/store/state.dart';
 import 'package:flutter_app_playground/helpers/drawer.dart';
 
-class CounterPage extends StatefulWidget {
+class CounterPage extends StatelessWidget {
   CounterPage({Key key, this.title}) : super(key: key);
 
   static const ROUTE_NAME = '/';
@@ -18,24 +22,6 @@ class CounterPage extends StatefulWidget {
   final String title;
 
   @override
-  _CounterPageState createState() => _CounterPageState();
-}
-
-class _CounterPageState extends State<CounterPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -47,7 +33,7 @@ class _CounterPageState extends State<CounterPage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title ?? 'Counter testing page'),
+        title: Text(title ?? 'Counter testing page'),
       ),
       drawer: createDefaultAppDrawer(context, CounterPage.ROUTE_NAME),
       body: Center(
@@ -73,17 +59,29 @@ class _CounterPageState extends State<CounterPage> {
             Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+            StoreConnector<AppState, int>(
+              converter: (store) => store.state.counter,
+              builder: (context, vm) {
+                return Text(
+                  '$vm',
+                  style: Theme.of(context).textTheme.display1,
+                );
+              },
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      floatingActionButton: StoreConnector<AppState, VoidCallback>(
+        converter: (store) {
+          return () => store.dispatch(IncrementCounter());
+        },
+        builder: (context, incCb) {
+          return FloatingActionButton(
+            onPressed: incCb,
+            tooltip: 'Increment',
+            child: Icon(Icons.add),
+          );
+        },
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
