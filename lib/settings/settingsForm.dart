@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app_playground/i18n/app_localizations.dart';
 import 'package:flutter_app_playground/settings/datepicker.dart';
 
 class SettingsForm extends StatefulWidget {
@@ -29,7 +30,6 @@ class SettingsFormState extends State<SettingsForm> {
 
   @override
   Widget build(BuildContext context) {
-
     return Form(
         key: _formKey,
         child: Container(
@@ -41,12 +41,12 @@ class SettingsFormState extends State<SettingsForm> {
                   padding: _elementPadding,
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
-                    decoration: const InputDecoration(
-                      hintText: 'Email address',
+                    decoration: InputDecoration(
+                      hintText: AppLocalizations.of(context).emailHint,
                     ),
                     validator: (value) {
                       if (!_emailRegex.hasMatch(value)) {
-                        return 'The input must be a valid email address!';
+                        return AppLocalizations.of(context).emailError;
                       }
                     },
                   )),
@@ -54,12 +54,12 @@ class SettingsFormState extends State<SettingsForm> {
               Padding(
                 padding: _elementPadding,
                 child: TextFormField(
-                  decoration: const InputDecoration(
-                    hintText: 'First name',
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context).firstNameHint,
                   ),
                   validator: (value) {
                     if (value.isEmpty) {
-                      return 'The first name must not be empty!';
+                      return AppLocalizations.of(context).firstNameError;
                     }
                   },
                 ),
@@ -68,12 +68,12 @@ class SettingsFormState extends State<SettingsForm> {
               Padding(
                 padding: _elementPadding,
                 child: TextFormField(
-                  decoration: const InputDecoration(
-                    hintText: 'Last name',
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context).lastNameHint,
                   ),
                   validator: (value) {
                     if (value.isEmpty) {
-                      return 'The last name must not be empty!';
+                      return AppLocalizations.of(context).lastNameError;
                     }
                   },
                 ),
@@ -81,10 +81,10 @@ class SettingsFormState extends State<SettingsForm> {
               // Date of birth
               // TODO: Figure out how to validate this!
               DatePicker(
-                labelText: 'Date of birth',
+                labelText: AppLocalizations.of(context).dateOfBirth,
                 selectDate: (date) {
                   setState(() {
-                    _dateOfBirth = date;                  
+                    _dateOfBirth = date;
                   });
                 },
                 selectedDate: this._dateOfBirth,
@@ -98,14 +98,15 @@ class SettingsFormState extends State<SettingsForm> {
                     // the form is invalid.
                     if (_formKey.currentState.validate()) {
                       // TODO: Some icon to dispose the stuff would be useful!
-                      Scaffold.of(context).showSnackBar(
-                          SnackBar(content: Text('Processing Data')));
+                      Scaffold.of(context).showSnackBar(SnackBar(
+                          content:
+                              Text(AppLocalizations.of(context).processing)));
                       Timer(Duration(seconds: 3), () {
                         Scaffold.of(context).showSnackBar(SnackBar(
                             content: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Text('Done'),
+                            Text(AppLocalizations.of(context).done),
                             Icon(
                               Icons.check,
                               color: Colors.green,
@@ -115,10 +116,11 @@ class SettingsFormState extends State<SettingsForm> {
                       });
                     } else {
                       Scaffold.of(context).showSnackBar(SnackBar(
-                          content: Text('Please fill the form correctly!')));
+                          content:
+                              Text(AppLocalizations.of(context).invalidForm)));
                     }
                   },
-                  child: Text('Submit'),
+                  child: Text(AppLocalizations.of(context).submit),
                 ),
               ),
             ],

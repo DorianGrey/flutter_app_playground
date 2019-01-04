@@ -1,0 +1,94 @@
+{
+  "@@last_modified": "2019-01-04T16:58:53.251523",
+  "@@locale": "de",
+  "appHeader": "Flutter Beispielanwendung",
+  "@appHeader": {
+    "description": "General application headline",
+    "type": "text",
+    "placeholders": {}
+  },
+  "counterPageHeader": "Counter Testseite",
+  "@counterPageHeader": {
+    "description": "Counter tester page header",
+    "type": "text",
+    "placeholders": {}
+  },
+  "counterLabel": "Sie haben den Button so oft gedrückt:",
+  "@counterLabel": {
+    "description": "Label for counter indicator / Counter page",
+    "type": "text",
+    "placeholders": {}
+  },
+  "counterButtonTooltip": "Erhöhen",
+  "@counterButtonTooltip": {
+    "description": "Tooltip for the counter incrementer / Counter page",
+    "type": "text",
+    "placeholders": {}
+  },
+  "emailHint": "E-Mail Adresse",
+  "@emailHint": {
+    "description": "Email input field hint / label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "emailError": "Der gegebene Text ist keine valide E-Mail Adresse!",
+  "@emailError": {
+    "description": "Error text for invalid email fields",
+    "type": "text",
+    "placeholders": {}
+  },
+  "firstNameHint": "Vorname",
+  "@firstNameHint": {
+    "description": "First name input field hint / label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "firstNameError": "Der Vorname muss vorgegeben werden!",
+  "@firstNameError": {
+    "description": "Error text for first name fields",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lastNameHint": "Nachname",
+  "@lastNameHint": {
+    "description": "Last name input field hint / label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lastNameError": "Der Nachname muss vorgegeben werden!",
+  "@lastNameError": {
+    "description": "Error text for last name fields",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dateOfBirth": "Geburtsdatum",
+  "@dateOfBirth": {
+    "description": "Date of birth picker label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidForm": "Bitte füllen Sie das Formular korrekt aus!",
+  "@invalidForm": {
+    "description": "Invalid form error message",
+    "type": "text",
+    "placeholders": {}
+  },
+  "processing": "Verarbeite...",
+  "@processing": {
+    "description": "General processing indication label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "submit": "Absenden",
+  "@submit": {
+    "description": "General submit label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "done": "Fertig",
+  "@done": {
+    "description": "General \"done\" label",
+    "type": "text",
+    "placeholders": {}
+  }
+}

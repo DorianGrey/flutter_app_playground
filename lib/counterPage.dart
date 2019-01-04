@@ -4,22 +4,16 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_app_playground/store/actions.dart';
 import 'package:flutter_app_playground/store/state.dart';
 import 'package:flutter_app_playground/helpers/drawer.dart';
+import 'package:flutter_app_playground/i18n/app_localizations.dart';
 
 class CounterPage extends StatelessWidget {
-  CounterPage({Key key, this.title}) : super(key: key);
+  CounterPage({Key key}) : super(key: key);
 
   static const ROUTE_NAME = '/';
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
   // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +27,7 @@ class CounterPage extends StatelessWidget {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(title ?? 'Counter testing page'),
+        title: Text(AppLocalizations.of(context).counterPageHeader),
       ),
       drawer: createDefaultAppDrawer(context, CounterPage.ROUTE_NAME),
       body: Center(
@@ -57,7 +51,7 @@ class CounterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              AppLocalizations.of(context).counterLabel,
             ),
             StoreConnector<AppState, int>(
               converter: (store) => store.state.counter,
@@ -78,7 +72,7 @@ class CounterPage extends StatelessWidget {
         builder: (context, incCb) {
           return FloatingActionButton(
             onPressed: incCb,
-            tooltip: 'Increment',
+            tooltip: AppLocalizations.of(context).counterButtonTooltip,
             child: Icon(Icons.add),
           );
         },

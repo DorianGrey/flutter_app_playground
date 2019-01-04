@@ -13,8 +13,8 @@ Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
         ),
     ),
     ListTile(
-        leading: Icon(Icons.home),
-        title: Text('Home'),
+        leading: Icon(Icons.timer),
+        title: Text('Counter'),
         onTap: () {
           if (currentRouteName != CounterPage.ROUTE_NAME) {
             Navigator.pushNamed(context, CounterPage.ROUTE_NAME);

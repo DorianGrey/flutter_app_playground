@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "_runner": "terminal",
+  "tasks": [
+    {
+      "label": "[i18n] Extract messages",
+      "command": "flutter packages pub run intl_translation:extract_to_arb --output-dir=lib/i18n/generated lib/i18n/app_localizations.dart",
+      "type": "shell",
+      "problemMatcher": "$dart-pub-build_runner"
+    },
+    {
+      "label": "[i18n] Generate dart from arb",
+      "command": "flutter packages pub run intl_translation:generate_from_arb --output-dir=lib/i18n/generated --no-use-deferred-loading lib/i18n/app_localizations.dart lib/i18n/intl_de.arb lib/i18n/intl_en.arb",
+      "type": "shell",
+      "problemMatcher": "$dart-pub-build_runner"
+    }
+  ]
+}
