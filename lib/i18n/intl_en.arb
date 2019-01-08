@@ -7,9 +7,15 @@
     "type": "text",
     "placeholders": {}
   },
-  "counterPageHeader": "Counter testing page",
-  "@counterPageHeader": {
-    "description": "Counter tester page header",
+  "counterLink": "Counter Tester",
+  "@counterLink": {
+    "description": "Counter page: Drawer link and headline",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsLink": "Personal information",
+  "@settingsLink": {
+    "description": "Settings page: Drawer link and headline",
     "type": "text",
     "placeholders": {}
   },

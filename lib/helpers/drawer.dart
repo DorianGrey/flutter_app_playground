@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_playground/counterPage.dart';
+import 'package:flutter_app_playground/i18n/app_localizations.dart';
 import 'package:flutter_app_playground/settings/settings.dart';
 
 Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
@@ -14,7 +15,7 @@ Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
     ),
     ListTile(
         leading: Icon(Icons.timer),
-        title: Text('Counter'),
+        title: Text(AppLocalizations.of(context).counterLink),
         onTap: () {
           if (currentRouteName != CounterPage.ROUTE_NAME) {
             Navigator.pushNamed(context, CounterPage.ROUTE_NAME);
@@ -22,7 +23,7 @@ Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
         }),
     ListTile(
         leading: Icon(Icons.account_circle),
-        title: Text('Personal information'),
+        title: Text(AppLocalizations.of(context).settingsLink),
         onTap: () {
           if (currentRouteName != SettingsPage.ROUTE_NAME) {
             Navigator.pushNamed(context, SettingsPage.ROUTE_NAME);

@@ -25,12 +25,17 @@ class AppLocalizations {
         name: 'appHeader', desc: 'General application headline');
   }
 
-  /// Stuff for the counter page:
-
-  String get counterPageHeader {
-    return Intl.message('Counter testing page',
-        name: 'counterPageHeader', desc: 'Counter tester page header');
+  /// For the drawer and corresponding page headers.
+  
+  String get counterLink {
+    return Intl.message('Counter Tester', name: 'counterLink', desc: 'Counter page: Drawer link and headline');
   }
+
+  String get settingsLink {
+    return Intl.message('Personal information', name: 'settingsLink', desc: 'Settings page: Drawer link and headline');
+  }
+
+  /// Stuff for the counter page:
 
   String get counterLabel {
     return Intl.message('You have pushed the button this many times:',

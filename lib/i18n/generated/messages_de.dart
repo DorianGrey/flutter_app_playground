@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "appHeader" : MessageLookupByLibrary.simpleMessage("Flutter Beispielanwendung"),
     "counterButtonTooltip" : MessageLookupByLibrary.simpleMessage("Erhöhen"),
     "counterLabel" : MessageLookupByLibrary.simpleMessage("Sie haben den Button so oft gedrückt:"),
-    "counterPageHeader" : MessageLookupByLibrary.simpleMessage("Counter Testseite"),
+    "counterLink" : MessageLookupByLibrary.simpleMessage("Counter Testseite"),
     "dateOfBirth" : MessageLookupByLibrary.simpleMessage("Geburtsdatum"),
     "done" : MessageLookupByLibrary.simpleMessage("Fertig"),
     "emailError" : MessageLookupByLibrary.simpleMessage("Der gegebene Text ist keine valide E-Mail Adresse!"),
@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "lastNameError" : MessageLookupByLibrary.simpleMessage("Der Nachname muss vorgegeben werden!"),
     "lastNameHint" : MessageLookupByLibrary.simpleMessage("Nachname"),
     "processing" : MessageLookupByLibrary.simpleMessage("Verarbeite..."),
+    "settingsLink" : MessageLookupByLibrary.simpleMessage("Persönliche Informationen"),
     "submit" : MessageLookupByLibrary.simpleMessage("Absenden")
   };
 }

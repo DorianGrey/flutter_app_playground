@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "appHeader" : MessageLookupByLibrary.simpleMessage("Flutter Example App"),
     "counterButtonTooltip" : MessageLookupByLibrary.simpleMessage("Increment"),
     "counterLabel" : MessageLookupByLibrary.simpleMessage("You have pushed the button this many times:"),
-    "counterPageHeader" : MessageLookupByLibrary.simpleMessage("Counter testing page"),
+    "counterLink" : MessageLookupByLibrary.simpleMessage("Counter Tester"),
     "dateOfBirth" : MessageLookupByLibrary.simpleMessage("Date of birth"),
     "done" : MessageLookupByLibrary.simpleMessage("Done"),
     "emailError" : MessageLookupByLibrary.simpleMessage("The input must be a valid email address!"),
@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "lastNameError" : MessageLookupByLibrary.simpleMessage("The last name must not be empty!"),
     "lastNameHint" : MessageLookupByLibrary.simpleMessage("Last name"),
     "processing" : MessageLookupByLibrary.simpleMessage("Processing..."),
+    "settingsLink" : MessageLookupByLibrary.simpleMessage("Personal information"),
     "submit" : MessageLookupByLibrary.simpleMessage("Submit")
   };
 }
