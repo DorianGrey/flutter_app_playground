@@ -19,6 +19,12 @@
     "type": "text",
     "placeholders": {}
   },
+  "chartLink": "Charts",
+  "@chartLink": {
+    "description": "Chart page: Drawer link and headline",
+    "type": "text",
+    "placeholders": {}
+  },
   "counterLabel": "You have pushed the button this many times:",
   "@counterLabel": {
     "description": "Label for counter indicator / Counter page",

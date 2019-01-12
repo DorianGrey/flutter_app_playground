@@ -21,6 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "appHeader" : MessageLookupByLibrary.simpleMessage("Flutter Example App"),
+    "chartLink" : MessageLookupByLibrary.simpleMessage("Charts"),
     "counterButtonTooltip" : MessageLookupByLibrary.simpleMessage("Increment"),
     "counterLabel" : MessageLookupByLibrary.simpleMessage("You have pushed the button this many times:"),
     "counterLink" : MessageLookupByLibrary.simpleMessage("Counter Tester"),

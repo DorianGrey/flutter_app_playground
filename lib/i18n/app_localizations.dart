@@ -35,6 +35,10 @@ class AppLocalizations {
     return Intl.message('Personal information', name: 'settingsLink', desc: 'Settings page: Drawer link and headline');
   }
 
+  String get chartLink {
+    return Intl.message('Charts', name: 'chartLink', desc: 'Chart page: Drawer link and headline');
+  }
+
   /// Stuff for the counter page:
 
   String get counterLabel {
@@ -105,6 +109,8 @@ class AppLocalizations {
   String get done {
     return Intl.message('Done', name: 'done', desc: 'General "done" label');
   }
+
+  /// For the chart page
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
