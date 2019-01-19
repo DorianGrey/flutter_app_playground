@@ -11,7 +11,7 @@ Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
           child: Icon(Icons.assignment_ind, size: IconTheme.of(context).size * 4,),
         ),
         decoration: BoxDecoration(
-          color: Colors.deepOrange,
+          color: Theme.of(context).secondaryHeaderColor,
         ),
     ),
     ListTile(
