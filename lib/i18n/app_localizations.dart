@@ -35,8 +35,8 @@ class AppLocalizations {
     return Intl.message('Personal information', name: 'settingsLink', desc: 'Settings page: Drawer link and headline');
   }
 
-  String get chartLink {
-    return Intl.message('Charts', name: 'chartLink', desc: 'Chart page: Drawer link and headline');
+  String get barChartLink {
+    return Intl.message('Bar chart', name: 'barChartLink', desc: 'Bar chart page: Drawer link and headline');
   }
 
   /// Stuff for the counter page:

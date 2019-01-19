@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_playground/chartPage.dart';
+import 'package:flutter_app_playground/barChartPage.dart';
 import 'package:flutter_app_playground/counterPage.dart';
 import 'package:flutter_app_playground/i18n/app_localizations.dart';
 import 'package:flutter_app_playground/settings/settings.dart';
@@ -32,10 +32,10 @@ Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
         }),
     ListTile(
       leading: Icon(Icons.table_chart),
-      title: Text(AppLocalizations.of(context).chartLink),
+      title: Text(AppLocalizations.of(context).barChartLink),
       onTap: () {
-        if (currentRouteName != ChartPage.ROUTE_NAME) {
-          Navigator.pushNamed(context, ChartPage.ROUTE_NAME);
+        if (currentRouteName != BarChartPage.ROUTE_NAME) {
+          Navigator.pushNamed(context, BarChartPage.ROUTE_NAME);
         }
       },
     )

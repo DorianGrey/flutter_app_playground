@@ -11,8 +11,8 @@ class OrdinalSales {
   OrdinalSales(this.year, this.sales);
 }
 
-class ChartPage extends StatelessWidget {
-  ChartPage({Key key}) : super(key: key);
+class BarChartPage extends StatelessWidget {
+  BarChartPage({Key key}) : super(key: key);
 
   static const ROUTE_NAME = '/charts';
 
@@ -40,9 +40,9 @@ class ChartPage extends StatelessWidget {
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Text(AppLocalizations.of(context).chartLink),
+          title: Text(AppLocalizations.of(context).barChartLink),
         ),
-        drawer: createDefaultAppDrawer(context, ChartPage.ROUTE_NAME),
+        drawer: createDefaultAppDrawer(context, BarChartPage.ROUTE_NAME),
         body: Center(
           // Note: Adjusting does not seem to work with a Column()
           // container. However: We need to add some padding around.
