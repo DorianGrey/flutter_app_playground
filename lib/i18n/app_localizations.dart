@@ -39,6 +39,16 @@ class AppLocalizations {
     return Intl.message('Bar chart', name: 'barChartLink', desc: 'Bar chart page: Drawer link and headline');
   }
 
+  String get pieChartLink {
+    return Intl.message('Pie chart', name: 'pieChartLink', desc: 'Pie chart page: Drawer link and headline');
+  }
+
+  /// Stuff for the pie chart page:
+  
+  String get pieChartHeader {
+    return Intl.message('Software manual categories', name: 'pieChartHeader', desc: 'Pie chart page: Chart headline');
+  }
+
   /// Stuff for the counter page:
 
   String get counterLabel {

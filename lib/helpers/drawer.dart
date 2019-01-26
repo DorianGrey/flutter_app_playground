@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_playground/barChartPage.dart';
 import 'package:flutter_app_playground/counterPage.dart';
 import 'package:flutter_app_playground/i18n/app_localizations.dart';
+import 'package:flutter_app_playground/pieChartPage.dart';
 import 'package:flutter_app_playground/settings/settings.dart';
 
 Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
@@ -38,7 +39,16 @@ Drawer createDefaultAppDrawer(BuildContext context, String currentRouteName) {
           Navigator.pushNamed(context, BarChartPage.ROUTE_NAME);
         }
       },
-    )
+    ),
+    ListTile(
+      leading: Icon(Icons.pie_chart_outlined),
+      title: Text(AppLocalizations.of(context).pieChartLink),
+      onTap: () {
+        if (currentRouteName != PieChartPage.ROUTE_NAME) {
+          Navigator.pushNamed(context, PieChartPage.ROUTE_NAME);
+        }
+      },
+    ),
   ];
 
   return Drawer(

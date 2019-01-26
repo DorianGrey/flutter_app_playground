@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-01-19T12:55:20.013420",
+  "@@last_modified": "2019-01-26T13:19:27.846853",
   "appHeader": "Flutter Example App",
   "@appHeader": {
     "description": "General application headline",
@@ -21,6 +21,18 @@
   "barChartLink": "Bar chart",
   "@barChartLink": {
     "description": "Bar chart page: Drawer link and headline",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pieChartLink": "Pie chart",
+  "@pieChartLink": {
+    "description": "Pie chart page: Drawer link and headline",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pieChartHeader": "Software manual categories",
+  "@pieChartHeader": {
+    "description": "Pie chart page: Chart headline",
     "type": "text",
     "placeholders": {}
   },

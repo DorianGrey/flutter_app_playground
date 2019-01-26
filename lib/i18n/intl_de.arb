@@ -25,6 +25,18 @@
     "type": "text",
     "placeholders": {}
   },
+  "pieChartLink": "Kuchen-Diagramm",
+  "@pieChartLink": {
+    "description": "Pie chart page: Drawer link and headline",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pieChartHeader": "Software-Handbuch Kategorien",
+  "@pieChartHeader": {
+    "description": "Pie chart page: Chart headline",
+    "type": "text",
+    "placeholders": {}
+  },
   "counterLabel": "Sie haben den Button so oft gedrückt:",
   "@counterLabel": {
     "description": "Label for counter indicator / Counter page",

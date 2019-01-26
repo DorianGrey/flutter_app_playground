@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidForm" : MessageLookupByLibrary.simpleMessage("Bitte füllen Sie das Formular korrekt aus!"),
     "lastNameError" : MessageLookupByLibrary.simpleMessage("Der Nachname muss vorgegeben werden!"),
     "lastNameHint" : MessageLookupByLibrary.simpleMessage("Nachname"),
+    "pieChartHeader" : MessageLookupByLibrary.simpleMessage("Software-Handbuch Kategorien"),
+    "pieChartLink" : MessageLookupByLibrary.simpleMessage("Kuchen-Diagramm"),
     "processing" : MessageLookupByLibrary.simpleMessage("Verarbeite..."),
     "settingsLink" : MessageLookupByLibrary.simpleMessage("Persönliche Informationen"),
     "submit" : MessageLookupByLibrary.simpleMessage("Absenden")

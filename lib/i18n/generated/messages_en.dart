@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidForm" : MessageLookupByLibrary.simpleMessage("Please fill the form correctly!"),
     "lastNameError" : MessageLookupByLibrary.simpleMessage("The last name must not be empty!"),
     "lastNameHint" : MessageLookupByLibrary.simpleMessage("Last name"),
+    "pieChartHeader" : MessageLookupByLibrary.simpleMessage("Software manual categories"),
+    "pieChartLink" : MessageLookupByLibrary.simpleMessage("Pie chart"),
     "processing" : MessageLookupByLibrary.simpleMessage("Processing..."),
     "settingsLink" : MessageLookupByLibrary.simpleMessage("Personal information"),
     "submit" : MessageLookupByLibrary.simpleMessage("Submit")

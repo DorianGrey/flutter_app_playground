@@ -14,7 +14,7 @@ class OrdinalSales {
 class BarChartPage extends StatelessWidget {
   BarChartPage({Key key}) : super(key: key);
 
-  static const ROUTE_NAME = '/charts';
+  static const ROUTE_NAME = '/barChart';
 
   final sampleData = [
     OrdinalSales('2014', 5),
