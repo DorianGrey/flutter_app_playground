@@ -28,102 +28,102 @@ class SettingsFormState extends State<SettingsForm> {
   // Form field values.
   var _dateOfBirth = DateTime.now();
 
+
   @override
   Widget build(BuildContext context) {
+  final widgets = [
+    // Email field
+    TextFormField(
+        keyboardType: TextInputType.emailAddress,
+        decoration: InputDecoration(
+          hintText: AppLocalizations.of(context).emailHint,
+        ),
+        validator: (value) {
+          if (!_emailRegex.hasMatch(value)) {
+            return AppLocalizations.of(context).emailError;
+          }
+        },
+      ),
+      
+      //First name field
+    TextFormField(
+      decoration: InputDecoration(
+        hintText: AppLocalizations.of(context).firstNameHint,
+      ),
+      validator: (value) {
+        if (value.isEmpty) {
+          return AppLocalizations.of(context).firstNameError;
+        }
+      },
+    ),
+    // last name field
+    TextFormField(
+      decoration: InputDecoration(
+        hintText: AppLocalizations.of(context).lastNameHint,
+      ),
+      validator: (value) {
+        if (value.isEmpty) {
+          return AppLocalizations.of(context).lastNameError;
+        }
+      },
+    ),
+    // Date of birth
+    // TODO: Figure out how to validate this!
+    DatePicker(
+      labelText: AppLocalizations.of(context).dateOfBirth,
+      selectDate: (date) {
+        setState(() {
+          _dateOfBirth = date;
+        });
+      },
+      selectedDate: this._dateOfBirth,
+    ),
+    RaisedButton(
+      onPressed: () {
+        // Validate will return true if the form is valid, or false if
+        // the form is invalid.
+        if (_formKey.currentState.validate()) {
+          // TODO: Some icon to dispose the stuff would be useful!
+          Scaffold.of(context).showSnackBar(SnackBar(
+              content:
+                  Text(AppLocalizations.of(context).processing)));
+          Timer(Duration(seconds: 3), () {
+            Scaffold.of(context).showSnackBar(SnackBar(
+                content: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(AppLocalizations.of(context).done),
+                Icon(
+                  Icons.check,
+                  color: Colors.green,
+                )
+              ],
+            )));
+          });
+        } else {
+          Scaffold.of(context).showSnackBar(SnackBar(
+              content:
+                  Text(AppLocalizations.of(context).invalidForm)));
+        }
+      },
+      child: Text(AppLocalizations.of(context).submit),
+    )    
+  ];
+
+
     return Form(
         key: _formKey,
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          child: Column(
-            children: <Widget>[
-              // Email field
-              Padding(
-                  padding: _elementPadding,
-                  child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      hintText: AppLocalizations.of(context).emailHint,
-                    ),
-                    validator: (value) {
-                      if (!_emailRegex.hasMatch(value)) {
-                        return AppLocalizations.of(context).emailError;
-                      }
-                    },
-                  )),
-              // First name field
-              Padding(
-                padding: _elementPadding,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: AppLocalizations.of(context).firstNameHint,
-                  ),
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return AppLocalizations.of(context).firstNameError;
-                    }
-                  },
-                ),
-              ),
-              // Last name field
-              Padding(
-                padding: _elementPadding,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: AppLocalizations.of(context).lastNameHint,
-                  ),
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return AppLocalizations.of(context).lastNameError;
-                    }
-                  },
-                ),
-              ),
-              // Date of birth
-              // TODO: Figure out how to validate this!
-              DatePicker(
-                labelText: AppLocalizations.of(context).dateOfBirth,
-                selectDate: (date) {
-                  setState(() {
-                    _dateOfBirth = date;
-                  });
-                },
-                selectedDate: this._dateOfBirth,
-              ),
-              // Submit button
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: RaisedButton(
-                  onPressed: () {
-                    // Validate will return true if the form is valid, or false if
-                    // the form is invalid.
-                    if (_formKey.currentState.validate()) {
-                      // TODO: Some icon to dispose the stuff would be useful!
-                      Scaffold.of(context).showSnackBar(SnackBar(
-                          content:
-                              Text(AppLocalizations.of(context).processing)));
-                      Timer(Duration(seconds: 3), () {
-                        Scaffold.of(context).showSnackBar(SnackBar(
-                            content: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text(AppLocalizations.of(context).done),
-                            Icon(
-                              Icons.check,
-                              color: Colors.green,
-                            )
-                          ],
-                        )));
-                      });
-                    } else {
-                      Scaffold.of(context).showSnackBar(SnackBar(
-                          content:
-                              Text(AppLocalizations.of(context).invalidForm)));
-                    }
-                  },
-                  child: Text(AppLocalizations.of(context).submit),
-                ),
-              ),
-            ],
+          child: ListView.builder(
+            padding: _elementPadding,
+            itemBuilder: (context, idx) {
+              if (idx < widgets.length) {
+                return widgets[idx];
+              }
+              return null;
+            },
+            itemCount: widgets.length,
           ),
         ));
   }
