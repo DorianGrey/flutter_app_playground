@@ -7,5 +7,5 @@ jobs:
       - checkout
       - run: flutter doctor
       - run: flutter analyze
-      # - run: flutter test # Disabled for the moment due to known issues with internationalized apps.
+      # - run: flutter test # Disabled for the moment due to known issues with internationalized apps. Especially: https://github.com/flutter/flutter/issues/22193
       - run: flutter -v build apk 
