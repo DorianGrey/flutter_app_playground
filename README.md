@@ -22,5 +22,8 @@ Currently, all texts used within the app are listed in `lib/i18n/app_localizatio
 
 1. Stop the current dev mode, if active. (Recommended, but might not be required) 
 2. Extract messages to arb: `flutter packages pub run intl_translation:extract_to_arb --output-dir=lib/i18n/generated lib/i18n/app_localizations.dart` (each target file has to be added separately, if required) - for VSCode, there is a task named `[i18n] Extract messages` to simplify this.
-3. Generated `dart` message files from arb: `flutter packages pub run intl_translation:generate_from_arb --output-dir=lib/i18n/generated --no-use-deferred-loading lib/i18n/app_localizations.dart lib/i18n/intl_de.arb lib/i18n/intl_en.arb` (once again: wildcard does not seem to work, at least not on windows) - for VSCode, there is a task named `[i18n] Generate dart from arb` to simplify this.
-4. Start again.
+3. If they do not exist yet: Create separate `.arb` files per language in `lib/i18n`, where the file name matches the pattern `intl_{language code}.arb`.
+4. For each language: Update the content of the particular destination file so that it contains all keys listed in `lib/i18n/generated/intl_messages.arb`.
+5. Adopt the translations as required.
+6. Generated `dart` message files from arb: `flutter packages pub run intl_translation:generate_from_arb --output-dir=lib/i18n/generated --no-use-deferred-loading lib/i18n/app_localizations.dart lib/i18n/intl_de.arb lib/i18n/intl_en.arb` (once again: wildcard does not seem to work, at least not on windows) - for VSCode, there is a task named `[i18n] Generate dart from arb` to simplify this.
+7. Start again.
