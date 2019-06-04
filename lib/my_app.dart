@@ -10,6 +10,8 @@ import 'package:flutter_app_playground/counterPage.dart';
 import 'package:flutter_app_playground/store/state.dart';
 import 'package:flutter_app_playground/i18n/app_localizations.dart';
 
+import 'maps/mapViewPage.dart';
+
 class MyApp extends StatelessWidget {
   MyApp({Key key, @required this.store}) : super(key: key);
 
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
             SettingsPage.ROUTE_NAME: (context) => SettingsPage(),
             BarChartPage.ROUTE_NAME: (context) => BarChartPage(),
             PieChartPage.ROUTE_NAME: (context) => PieChartPage(),
+            MapViewPage.ROUTE_NAME: (context) => MapViewPage(),
           }),
     );
   }

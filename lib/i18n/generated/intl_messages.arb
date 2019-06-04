@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-01-26T13:19:27.846853",
+  "@@last_modified": "2019-06-04T13:01:23.362623",
   "appHeader": "Flutter Example App",
   "@appHeader": {
     "description": "General application headline",
@@ -27,6 +27,12 @@
   "pieChartLink": "Pie chart",
   "@pieChartLink": {
     "description": "Pie chart page: Drawer link and headline",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mapViewLink": "Map view",
+  "@mapViewLink": {
+    "description": "Map view page: Drawer link and headline",
     "type": "text",
     "placeholders": {}
   },

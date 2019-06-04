@@ -43,6 +43,10 @@ class AppLocalizations {
     return Intl.message('Pie chart', name: 'pieChartLink', desc: 'Pie chart page: Drawer link and headline');
   }
 
+  String get mapViewLink {
+    return Intl.message('Map view', name: 'mapViewLink', desc: 'Map view page: Drawer link and headline');
+  }
+
   /// Stuff for the pie chart page:
   
   String get pieChartHeader {

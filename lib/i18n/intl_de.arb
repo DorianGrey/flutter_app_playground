@@ -31,6 +31,12 @@
     "type": "text",
     "placeholders": {}
   },
+  "mapViewLink": "Kartenansicht",
+  "@mapViewLink": {
+    "description": "Map view page: Drawer link and headline",
+    "type": "text",
+    "placeholders": {}
+  },
   "pieChartHeader": "Software-Handbuch Kategorien",
   "@pieChartHeader": {
     "description": "Pie chart page: Chart headline",
