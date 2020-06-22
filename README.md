@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/DorianGrey/flutter_app_playground.svg?style=svg)](https://circleci.com/gh/DorianGrey/flutter_app_playground)
-
 # flutter_app_playground
 
 A flutter playground application.
