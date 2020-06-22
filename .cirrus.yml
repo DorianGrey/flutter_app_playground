@@ -2,6 +2,6 @@ container:
   image: cirrusci/flutter
 
 default_task:
-  compile_script: flutter -v build apk
+  compile_script: flutter -v build appbundle
   analyze_script: flutter analyze
   test_script: flutter test

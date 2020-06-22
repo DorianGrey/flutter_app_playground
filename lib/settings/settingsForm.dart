@@ -42,6 +42,7 @@ class SettingsFormState extends State<SettingsForm> {
           if (!_emailRegex.hasMatch(value)) {
             return AppLocalizations.of(context).emailError;
           }
+          return null;
         },
       ),
       
@@ -54,6 +55,7 @@ class SettingsFormState extends State<SettingsForm> {
         if (value.isEmpty) {
           return AppLocalizations.of(context).firstNameError;
         }
+        return null;
       },
     ),
     // last name field
@@ -65,6 +67,7 @@ class SettingsFormState extends State<SettingsForm> {
         if (value.isEmpty) {
           return AppLocalizations.of(context).lastNameError;
         }
+        return null;
       },
     ),
     // Date of birth
