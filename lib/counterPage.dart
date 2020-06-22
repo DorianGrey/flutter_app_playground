@@ -58,7 +58,7 @@ class CounterPage extends StatelessWidget {
               builder: (context, vm) {
                 return Text(
                   '$vm',
-                  style: Theme.of(context).textTheme.display1,
+                  style: Theme.of(context).textTheme.headline4,
                 );
               },
             ),
