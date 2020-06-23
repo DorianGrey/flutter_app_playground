@@ -1,3 +1,5 @@
+[![Build Status](https://api.cirrus-ci.com/github/DorianGrey/flutter_app_playground.svg)](https://cirrus-ci.com/github/DorianGrey/flutter_app_playground)
+
 # flutter_app_playground
 
 A flutter playground application.
