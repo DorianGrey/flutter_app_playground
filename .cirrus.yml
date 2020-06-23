@@ -1,0 +1,7 @@
+container:
+  image: cirrusci/flutter
+
+default_task:
+  compile_script: flutter -v build apk
+  analyze_script: flutter analyze
+  test_script: flutter test
