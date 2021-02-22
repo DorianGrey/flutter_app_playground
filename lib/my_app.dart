@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_playground/barChartPage.dart';
-import 'package:flutter_app_playground/pieChartPage.dart';
+import 'package:flutter_app_playground/bar_chart_page.dart';
+import 'package:flutter_app_playground/pie_chart_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
 import 'package:flutter_app_playground/settings/settings.dart';
-import 'package:flutter_app_playground/counterPage.dart';
+import 'package:flutter_app_playground/counter_page.dart';
 import 'package:flutter_app_playground/store/state.dart';
 import 'package:flutter_app_playground/i18n/app_localizations.dart';
 
-import 'maps/mapViewPage.dart';
+import 'maps/map_view_page.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({Key key, @required this.store}) : super(key: key);

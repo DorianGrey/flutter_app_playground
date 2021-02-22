@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-
+import 'package:flutter_app_playground/drawer/navigation_drawer.dart';
+import 'package:flutter_app_playground/i18n/app_localizations.dart';
 import 'package:flutter_app_playground/store/actions.dart';
 import 'package:flutter_app_playground/store/state.dart';
-import 'package:flutter_app_playground/helpers/drawer.dart';
-import 'package:flutter_app_playground/i18n/app_localizations.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 class CounterPage extends StatelessWidget {
   CounterPage({Key key}) : super(key: key);
@@ -29,7 +28,7 @@ class CounterPage extends StatelessWidget {
         // the App.build method, and use it to set our appbar title.
         title: Text(AppLocalizations.of(context).counterLink),
       ),
-      drawer: createDefaultAppDrawer(context, CounterPage.ROUTE_NAME),
+      drawer: NavigationDrawer(),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.

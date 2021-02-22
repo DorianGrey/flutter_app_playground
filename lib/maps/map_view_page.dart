@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_playground/helpers/drawer.dart';
+import 'package:flutter_app_playground/drawer/navigation_drawer.dart';
 import 'package:flutter_app_playground/i18n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong/latlong.dart';
@@ -17,7 +17,7 @@ class MapViewPage extends StatelessWidget {
           // the App.build method, and use it to set our appbar title.
           title: Text(AppLocalizations.of(context).mapViewLink),
         ),
-        drawer: createDefaultAppDrawer(context, MapViewPage.ROUTE_NAME),
+        drawer: NavigationDrawer(),
         body: Column(
           children: <Widget>[
             Flexible(
@@ -38,8 +38,8 @@ class MapViewPage extends StatelessWidget {
                         height: 80.0,
                         point: LatLng(53.5586941, 9.787749),
                         builder: (ctx) => Container(
-                              child: FlutterLogo(colors: Colors.amber),
-                            ),
+                          child: FlutterLogo(),
+                        ),
                       ),
                     ],
                   ),
