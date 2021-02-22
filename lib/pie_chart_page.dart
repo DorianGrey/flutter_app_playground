@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-
-import 'package:flutter_app_playground/helpers/drawer.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_app_playground/drawer/navigation_drawer.dart';
 import 'package:flutter_app_playground/i18n/app_localizations.dart';
 
 class ManualCategory {
@@ -43,12 +42,15 @@ class PieChartPage extends StatelessWidget {
           // the App.build method, and use it to set our appbar title.
           title: Text(AppLocalizations.of(context).pieChartLink),
         ),
-        drawer: createDefaultAppDrawer(context, PieChartPage.ROUTE_NAME),
+        drawer: NavigationDrawer(),
         body: Column(
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(top: 24),
-              child: Text(AppLocalizations.of(context).pieChartHeader, style: TextStyle(fontSize: 24),),
+              child: Text(
+                AppLocalizations.of(context).pieChartHeader,
+                style: TextStyle(fontSize: 24),
+              ),
             ),
             Expanded(
               flex: 20,

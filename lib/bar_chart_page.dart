@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-
-import 'package:flutter_app_playground/helpers/drawer.dart';
+import 'package:flutter_app_playground/drawer/navigation_drawer.dart';
 import 'package:flutter_app_playground/i18n/app_localizations.dart';
 
 class OrdinalSales {
@@ -28,8 +27,10 @@ class BarChartPage extends StatelessWidget {
       charts.Series<OrdinalSales, String>(
           id: 'Sample',
           colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
-          domainFn: (sales, _) => sales.year, // x-axis
-          measureFn: (sales, _) => sales.sales, // y-axis
+          domainFn: (sales, _) => sales.year,
+          // x-axis
+          measureFn: (sales, _) => sales.sales,
+          // y-axis
           data: sampleData)
     ];
   }
@@ -42,7 +43,7 @@ class BarChartPage extends StatelessWidget {
           // the App.build method, and use it to set our appbar title.
           title: Text(AppLocalizations.of(context).barChartLink),
         ),
-        drawer: createDefaultAppDrawer(context, BarChartPage.ROUTE_NAME),
+        drawer: NavigationDrawer(),
         body: Center(
           // Note: Adjusting does not seem to work with a Column()
           // container. However: We need to add some padding around.
